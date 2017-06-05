@@ -1,0 +1,20 @@
+80 Years of Best Sellers 1895-1975
+by Alice Payne Hackett and James Henry Burke
+New York: R.R. Bowker Company, 1977.
+
+
+__________________
+Method
+*Where possible, I am trying to flag editions that correspond with the publisher designated by Hackett [highlighted in yellow].  However, it should be noted that Hackett does not clarify if a particular edition needs to be singled out within a given year.  Hackett also does not report sales numbers for any of the lists so far.
+
+*Need to figure out how we are dealing with titles that appear in top 10 lists over multiple years.  For now I have two columns added.  One indicates what list in Hackett's book this comes from: "Hackettlist."  The other indicates the numerical place of the title in the list.  There is at least one tie already at the #10 spot in 1898.
+
+*Update 9.23:  Circled back to add column "Jgenre" to 1895 to 1900 lists.  These are genre identifiers from me to correct errors in the OCLC genre columns.
+
+*Update 9.26: Circled back to add column "Present" to all lists.  This column signals the text to use for selection purposes with a "y."
+
+__________________
+Representation
+Hackett's lists were derived from the archive of Publisher's Weekly where Hackett worked and compiled records over many years.  Therefore the lists only represent American records to which Hackett had access.  Her lists for 1895-1912 were derived from The Bookman as opposed to Publisher's Weekly.  Publisher's Weekly ran its own lists 1912-1975 but only counted books distributed "through the trade."  Therefore, clubs like "Book-of-the-Month" and mail order titles are excluded from the data behind the lists.  Generally there is very little data or information on the sources of Hackett's rankings at present.  
+
+HTRC's holdings only provide adequate coverage through the 1923 lists.  Only in 1923's lists odes the number of available "new" texts drop off noticeably.
