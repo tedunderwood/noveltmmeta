@@ -15,3 +15,7 @@ Metadata for HathiTrust fiction in copyright. Fiction was identified algorithmic
 
 Column definitions are explained in **incopyrightdatadictionary.md**
 
+bestsellersources
+-----------------
+
+A folder containing a lot of different metadata about bestsellers in England and America.
