@@ -9,7 +9,12 @@ Most of the other lists here were transcribed by Jordan Sellers. His notes about
 
 Clive Bloom's bestseller list is in clivebloombestsellers.csv.
 
-Work on this project was also done by Kyle R. Johnston, although as it happens I don't think any of the files here were directly produced by him.
+aggregatedbestsellermetadata.csv
+--------------------------------
+
+If you want just a list of bestsellers in Hathi, and don't care about which historian originally reported them as a bestseller, this is a list based on the Bookman (Hackett), *Publisher's Weekly* (Unsworth), Leavis, Altick, and I think Mott. It includes HathiTrust volume IDs. 
+
+It also includes a lot of metadata for a negative contrast class of non-bestsellers, but you can weed these out using the **sales** column.
 
 count_bestseller_lists.ipynb
 ----------------------------
