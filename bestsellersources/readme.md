@@ -12,7 +12,7 @@ Clive Bloom's bestseller list is in clivebloombestsellers.csv.
 aggregatedbestsellermetadata.csv
 --------------------------------
 
-If you want just a list of bestsellers in Hathi, and don't care about which historian originally reported them as a bestseller, this is a list based on the Bookman (Hackett), *Publisher's Weekly* (Unsworth), Leavis, Altick, and I think Mott. It includes HathiTrust volume IDs. 
+If you want just a list of bestsellers in Hathi, and don't care about which historian originally reported them as a bestseller, this is a list based on the Bookman (Hackett), *Publisher's Weekly* (Unsworth), Leavis, Altick, and I think Mott. It includes HathiTrust volume IDs. Much of the work of assembling this was done by Kyle R. Johnston.
 
 It also includes a lot of metadata for a negative contrast class of non-bestsellers, but you can weed these out using the **sales** column.
 
