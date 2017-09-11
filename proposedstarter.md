@@ -13,7 +13,7 @@ We'd like to create several lists of fiction to help researchers enter this fiel
 
 First two tasks are straightforward (the first is complete.) But how do we approach the third? I think we've agreed that we want to select the list in several ways (or allow it to be created as the union of several lists). Partly this is a strategy to communicate that samples are provisional things: there is no such thing as a perfectly-balanced sample suited to answer every conceivable question.
 
-But okay, how do we select volumes for the selective list?
+But okay, granted that we're going to select volumes in several ways -- what are those ways?
 
 * One strategy is to select volumes that seem important for some reason. Say:
     1. Works listed as "canonical" in the Open Syllabus project, or frequently reviewed in Goodreads (these are of course contemporary perspectives).
@@ -24,9 +24,11 @@ But okay, how do we select volumes for the selective list?
 * Two problems with that strategy:
     1. Many research questions require some kind of contrast between prominent and obscure works, but we'll have no obscure works.
     2. Our lists are likely to cover different timespans. E.g., I have a sample of reviewed authors 1820-1950. Goodreads and Open Syllabus will skew contemporary. Algee-Hewitt/McGurl cover the 20c. Disjoint timespans are okay, but it would be nice to have a more integrated list that covers 1700-2007 evenly.
-* So here's a suggested amendment/addition to our "list of lists." Instead of just doing (4) above (taking works frequently reprinted), let's construct a sample explicitly stratified to cover different levels of prominence or obscurity. I would suggest this approach: sort authors based on the number of volumes they have in the library (across all periods). Then divide that list into three parts. Select 1000 volumes from the top third (authors frequently reprinted). Then 1000 volumes from the middle third, and 1000 volumes from the bottom. With the proviso that each list of 1000 has to be evenly distributed across decades.
+* So here's a suggested amendment/addition to our "list of lists." Instead of just doing (iv) above (taking works frequently reprinted), let's construct a sample explicitly stratified to cover different levels of prominence or obscurity. I would suggest this approach: sort authors based on the number of volumes they have in the library (across all periods). Then divide that list into three parts. Select 1000 volumes from the top third (authors frequently reprinted). Then 1000 volumes from the middle third, and 1000 volumes from the bottom. With the proviso that each list of 1000 has to be evenly distributed across decades. Let's call this the stratified list.
+    - a problem here: the eighteenth century is so sparse in Hathi that it might not work to distribute texts evenly across decades
+* Another problem: demographic balance. This could be addressed by rebalancing the lists described above, or by creating supplementary lists. Both approaches are probably needed. If we have lists of authors from minority ethnicities, those lists may be small enough that we could simply add them, in toto, to our starter set. Where gender is concerned, I would be inclined to create an alternate version of the stratified list where we guarantee a) that the whole list includes equal numbers of men and women and b) that the sorting of authors is done separately for men and women so they have equal chances to be in each "third."
 
-We can compose a selective list by taking the union of all of the above. That may come out to be 6000 or 7000 works.
+We can compose a selective list by taking the union of all of the above. That may come out to be 8000 or 9000 works. That may be too large for some purposes, and the whole apparatus of selection may be too complex for people just starting out to think about. If we want to construct a super-simple starter subset of 1000 volumes I have no objection. But how to do that? One solution would be: just take the top third of the gender-balanced stratified list (described in the last bullet point above).
 
 But so far we're just talking metadata. An equally big obstacle to research is getting at the text itself, either in the form of connected sentences or as wordcounts.
 
