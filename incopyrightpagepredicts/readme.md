@@ -3,6 +3,8 @@ page-level predictions for post-1922 fiction
 
 This is bulky and not well organized, but I'm making it available anyway. Basically, I've gone through all the IDs in my list of **incopyrightfiction.csv** and made page-level predictions of the likelihood that each page *is fiction.*
 
+For the code that produced these predictions see [the 20cgenres/page repo.](https://github.com/tedunderwood/20cgenres/tree/master/page)
+
 The files here are really .jsonl rather than .json. That's to say, each line is a separate json object.
 
 The data format is fairly self-explanatory. **docid** is the HathiTrust volume ID. **pagepredictions** points to a list of real numbers indicating the probability-of-being-fiction for each page. These pages are in the same order as HathiTrust Extracted Features *in 2016* (see below for the problem of persistence). If you just want to "get the fiction," you can take a sequence of pages from **firstpage** to **lastpage,** inclusive.
