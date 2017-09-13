@@ -9,7 +9,7 @@ pre1923hathifiction.csv
 -----------------------
 Metadata for fiction before 1923. Fiction was identified algorithmically, using methods documented in [Understanding Genre in a Collection of a Million Volumes.](https://figshare.com/articles/Understanding_Genre_in_a_Collection_of_a_Million_Volumes_Interim_Report/1281251)
 
-Column definitions are explained in **pre1923datadictionary.md**
+Column definitions are explained in [**pre1923datadictionary.md**](https://github.com/tedunderwood/noveltmmeta/blob/master/pre1923datadictionary.md)
 
 If you want to cite this as a resource, you can say Ted Underwood, "English-Language Fiction in HathiTrust Before 1923," github, 2017, https://github.com/tedunderwood/noveltmmeta/blob/master/pre1923hathifiction.csv. Alternately (and preferably) you could cite the figshare version linked above (follow the links within figshare to the dataset itself.)
 
@@ -19,7 +19,7 @@ incopyrighthathifiction.csv
 ---------------------------
 Metadata for HathiTrust fiction in copyright. Fiction was identified algorithmically, using a variant of the strategy mentioned above; code is contained in [the 20c genres repo.](https://github.com/tedunderwood/20cgenres)
 
-Column definitions are explained in **incopyrightdatadictionary.md**
+Column definitions are explained in [**incopyrightdatadictionary.md**](https://github.com/tedunderwood/noveltmmeta/blob/master/incopyrightdatadictionary.md)
 
 If you want to cite this as a resource, you can say Ted Underwood, "English-Language Fiction in HathiTrust After 1922," github, 2017, https://github.com/tedunderwood/noveltmmeta/blob/master/incopyrightfiction.csv.
 
