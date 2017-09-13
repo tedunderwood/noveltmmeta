@@ -7,6 +7,8 @@ The files here are really .jsonl rather than .json. That's to say, each line is 
 
 The data format is fairly self-explanatory. **docid** is the HathiTrust volume ID. **pagepredictions** points to a list of real numbers indicating the probability-of-being-fiction for each page. These pages are in the same order as HathiTrust Extracted Features *in 2016* (see below for the problem of persistence). If you just want to "get the fiction," you can take a sequence of pages from **firstpage** to **lastpage,** inclusive.
 
+What I don't have yet is a beautiful index telling you which volume is in which file. Right now, your only alternative is to download them all. **TODO:** fix that.
+
 Problem of persistence:
 -----------------------
 
