@@ -1,7 +1,7 @@
 page-level predictions for post-1922 fiction
 ============================================
 
-This is bulky and not well organized, but I'm making it available anyway. Basically, I've gone through all the IDs in my list of **incopyrightfiction.csv** and made page-level predictions of the likelihood that each page *is fiction.*
+This is bulky and not well organized, but I'm making it available anyway. Basically, I've gone through all the IDs in my list of **incopyrightfiction.csv** and made page-level predictions of the likelihood that each page *is fiction.* "Not fiction," in this case, includes front and back matter, ads, as well as e.g. a nonfiction preface.
 
 For the code that produced these predictions see [the 20cgenres/page repo.](https://github.com/tedunderwood/20cgenres/tree/master/page)
 
