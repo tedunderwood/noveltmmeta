@@ -14,7 +14,7 @@ We'd like to create several lists of fiction to help researchers enter this fiel
 
 2. Another might be a deduplicated list: just distinct title/author combinations, with some special provisions for multivolume works. Still tens of thousands of vols. Still no enriched metadata.
 
-3. Then there will be eight alternative subsets of the deduplicated list. To be frank, presenting these as "eight alternative lists" is to some extent a rhetorical choice. In my inmost soul, I still think of this as a single flexible list designed to allow the *user* to define criteria of representation and select their own subset. And, in fact, it can still be used that way. But I've been persuaded that the flexibility of the list is best communicated by example: i.e., let's go ahead and select a bunch of different subsets. The first five of these would each be ~2,000 volumes long.
+3. Then there will be eight alternative subsets of the deduplicated list. To be frank, presenting these as "eight alternative lists" is to some extent a rhetorical choice. In my inmost soul, I still think of this as a single flexible resource designed to allow the *user* to define criteria of representation and select their own subset. And, in fact, it can still be used that way. But I've been persuaded that the flexibility of the list is best communicated by example: i.e., let's go ahead and select a bunch of different subsets. The first five of these would each be ~2,000 volumes long.
 
     a. A random sample that echoes nationality / gender / reprint-frequency proportions in Hathi. Works in translation excluded; we balance nationality purely inside an Anglo-American context. Even distribution across time 1700-2007.
 
@@ -34,6 +34,13 @@ We'd like to create several lists of fiction to help researchers enter this fiel
 
 4. There's also a list of authors inclided in 3(a-h).
 
+Benchmarking
+------------
+
+We'll provide some measure of OCR quality for all the volumes. I'm open to suggestions about the best measure; will probably ask David Bamman when I get close to doing this. We will also use this measure to indicate how mean OCR quality varies across the timeline.
+
+People may want to know how Hathi itself compares to other possible samples of the literary past. We'll do some benchmarking against Garside and Publishers Weekly, to produce a diachronic illustration.
+
 Metadata structure
 ------------------
 
@@ -52,7 +59,10 @@ Metadata columns anticipated for volumes:
 * total number of book reviews for this author 1802-2007 in So & Underwood
 * author gender
 * author nationality
+* a flag, originally composed in English (True/False)
 * mode(s) of selection; this may boil down to, which of the eight lists prompted its inclusion
+* estimated OCR quality
+* whatever linked-data identifier is available
 
 for authors:
 
@@ -64,11 +74,17 @@ for authors:
 * gender
 * total number of books in the library
 * total number of book reviews for this author 1802-2007 in So & Underwood
+* whatever linked-data identifier is available
 
 I imagine organizing this as a .tsv. Where we don't know something, we leave the field blank.
 Some fields could contain multiple entries: e.g. genre/form categories, alternate names. I'm willing to separate these with a pipe "|" unless someone screams and tells me that's nonstandard, inelegant etc.
 
 Some of the columns for authors might be duplicated in the title database, to make selection-by easier for novices.
+
+Linked open data
+----------------
+
+Once I've assembled the lists, I'll ask Susan Brown how best to generate standard identifiers for volumes and authors, using VIAF or some analogous authority. If someone wants to translate our metadata itself into RDF, they're welcome to, but I don't propose to undertake that project myself.
 
 Providing actual data
 ---------------------
