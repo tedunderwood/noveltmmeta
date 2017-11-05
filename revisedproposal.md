@@ -1,7 +1,7 @@
 Proposal for a starter set of English-language fiction 1700-2007
 ================================================================
 
-This is just a proposal intended to jumpstart discussion. This version revised in October to take account of new thinking as I move closer to implementation.
+A proposal for a starter set of English-language fiction, revised after the NovelTM meeting to incorporate suggestions in Montréal.
 
 selection method(s)
 --------------------
@@ -10,23 +10,29 @@ To summarize where I think we are:
 
 We'd like to create several lists of fiction to help researchers enter this field.
 
-1. One might be a list of everything we can find in Hathi. 100,000+ vols.
-2. Another might be a deduplicated list: just distinct title/author combinations, with some special provisions for multivolume works. Still tens of thousands of vols.
-3. Another might be a more selective list, let's say of 2,570 volumes. I would anticipate 500 fiction volumes for the 18c and then 2,070 evenly distributed from 1800-2007. (If people want to argue for more even coverage, I'm open to that.) Distribution is by date of publication (earliest known).
+1. One might be a list of everything we can find in Hathi. 206,000+ vols. Metadata will often be sparse; there will be a significant number of false positives. Lots of stuff in translation.
 
-First two tasks are straightforward (the first is complete.) But how do we approach the third? 
+2. Another might be a deduplicated list: just distinct title/author combinations, with some special provisions for multivolume works. Still tens of thousands of vols. Still no enriched metadata.
 
-I think our strategy needs several goals.
+3. Then there will be eight alternative subsets of the deduplicated list. To be frank, presenting these as "eight alternative lists" is to some extent a rhetorical choice. In my inmost soul, I still think of this as a single flexible list designed to allow the *user* to define criteria of representation and select their own subset. And, in fact, it can still be used that way. But I've been persuaded that the flexibility of the list is best communicated by example: i.e., let's go ahead and select a bunch of different subsets. The first five of these would each be ~2,000 volumes long.
 
-1. It needs to communicate that samples are provisional things: there is no such thing as a perfectly-balanced sample suited to answer every conceivable question. This means that any list we construct needs to have a basically plural character, and in presenting it, we need to stress, rhetorically, that it is not a single thing but a bunch of potential things folded together.
-2. On the other hand, the social criteria we can use to select volumes tend to have a lifespan of a century or 150 years. There aren't a lot of criteria we can use to select volumes across the full span of 300 years. So if we construct the list *purely* as the union of a bunch of different sets created by different social criteria, it's going to be awfully lumpy, considered as a whole.
-3. So I'm going to suggest that we allow the external outlines of the list (underline: external outlines) to be defined, more or less, by the one thing we have that does remain constant across 307 years, HathiTrust Digital Library itself. We'll aim at roughly the same UK/US balance and m/f balance that the library has in each period, and select volumes from authors that cover the same prominent-to-obscure spectrum found within the library. For this purpose, an author's prominence is defined as "number of volumes in the library, relative to the distribution of other authors born around the same time." (Underline "for this purpose.)
-4. Going back to underline that three times: "external outlines." A user who wants to change the US/UK balance or m/f balance can do that through the magic of just selecting a subset. A user who wants only frequently-reviewed authors or volumes can select them (we'll have a metadata column listing number of book reviews in periodical indexes 1802-2007.) Bestsellers? Select them. Etcetera. The logic is: this collection mirrors the library because, like the library, it is a resource rather than a corpus. A researcher builds a corpus to represent the social object they're investigating: that part is on you.
-5. The last desideratum for this list: we want a lot of metadata for authors. (At least nationality, gender, date of birth.) We already have several lists (Stanford, UIUC, Chicago) with enriched metadata. To save ourselves labor, it makes sense to select authors from those lists where we can. But "where we can" here means, where we have an author of the right prominence. When we need an obscure author, we'll take an obscure author whether or not we can find one in our existing lists. (The UIUC list does have a bunch in the 1820-1950 region.)
+    a. A random sample that echoes nationality / gender / reprint-frequency proportions in Hathi. Works in translation excluded; we balance nationality purely inside an Anglo-American context. Even distribution across time 1700-2007.
 
-A possible objection to this strategy is that we won't have enough authors from certain minority categories to create a subset--racial or ethnic minorities, Americans before 1820, possibly women in a few periods, and so on. (Note, this is different from "balance." We're not trying to create balance overall. But we are trying to give people a resource that permits flexibility.)
+    b. A sample of the authors most commonly reprinted in the library. Works in translation are not excluded. Even distribution 1700-2007.
 
-So we could enrich our dataset with lists of minority authors wherever appropriate. I would simply add these to the list, while flagging that the method of selection was different. Eighteenth-century authors, certainly 18c American authors, might be one of these underrepresented minorities that need to be supplemented by a different means of selection. 
+    c. A sample of the authors most commonly reviewed across 1800-2007 (not just in their lifetimes). (So & Underwood will provide information about *when* these authors were reviewed in a separate data publication.) Works in translation will not be excluded here, but works are selected by frequency of review in Anglo-American publications. Only 1800-2007, because we won't have review info before 1800.
+
+    d. A gender-balanced list. 1700-2007. Selection otherwise as per (a).
+
+    e. A list balanced to approximate demographic representation as best we can given works available. I.e, we can actually look up the American/UK population and ethnic composition in each decade, and try to include works that echo those proportions (to the extent that we can find enough works in Hathi -- and flag places where we just can't). Works in translation excluded. This list will require a lot of collaboration. Someone will have to do the demographic research; someone will have to create a list of books by nonwhite authors in Hathi. The list can only be supplemented with non-Hathi volumes if someone wants to take on the labor of tokenizing those volumes in a way compatible with Hathi extracted features.
+
+    f. A couple of 20c best-books lists (short).
+
+    g. A short list of 70-100 volumes that we want to use for pedagogical/annotation purposes. Created by you all manually adding things to a Google spreadsheet, using whatever mixture of criteria you like. If you want to use Gutenberg texts rather than Hathi for this, that's fine, and possibly a good idea. Then we could actually provide the texts. This is another place where someone else could take on some of the labor. There's no reason this process has to be coordinated with a-f above.
+
+    h. Finally, a superset of all the volumes included in a-f above. We're going to try to make these lists overlap as much as possible, so hopefully the superset is only like 5,000-6,000 works tops. [I don't want to create a manual metadata nightmare for us (or for me).] All the metadata is available, so users of the dataset who don't feel a through g represent the thing they want to study are politely exhorted to define their own list, using whatever mixture of criteria they like. If we want to build a beautiful web interface to help users turn the dials, someone else will need to volunteer to do that. 
+
+4. There's also a list of authors inclided in 3(a-h).
 
 Metadata structure
 ------------------
@@ -46,6 +52,7 @@ Metadata columns anticipated for volumes:
 * total number of book reviews for this author 1802-2007 in So & Underwood
 * author gender
 * author nationality
+* mode(s) of selection; this may boil down to, which of the eight lists prompted its inclusion
 
 for authors:
 
