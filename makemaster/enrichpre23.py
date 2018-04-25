@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
-# gather_oa.py
+# enrichpre23.py
 
-# The goal here is to enrich our metadata for pre-1923 fiction, if possible,
+# The goal here is to enrich our metadata for pre-1923 fiction, if possible, by adding
+# certain fields that were scraped from MARC only *after* I generated the original
+# list of fiction.
 
 import numpy as np
 import pandas as pd
@@ -90,7 +92,7 @@ fieldnames.insert(0, 'docid')
 
 missing = ficset - founddocs
 
-with open('../enrichedpre1923ficmeta.tsv', mode = 'w', encoding = 'utf-8') as f:
+with open('enrichedpre1923ficmeta.tsv', mode = 'w', encoding = 'utf-8') as f:
     writer = csv.DictWriter(f, fieldnames = fieldnames, delimiter = '\t')
     writer.writeheader()
     for key, row in ficmeta.items():
