@@ -1,9 +1,9 @@
-make master
+makemaster
 ===========
 
-Code used to generate the master list of fiction metadata.
+Code used to generate the master list of fiction metadata. The product of this work is stored at the top level of **noveltmmeta** as **masterficmetadata.tsv**; the sources and code are exposed here.
 
-In practice, the process began with three lists of fiction developed for previous projects:
+In practice, the process began with two lists of fiction developed for previous projects:
 
 pre1923hathifiction.csv
 -----------------------
@@ -17,6 +17,8 @@ If you want to cite this as a resource, I would recommend that you consider citi
 
 The work that developed this dataset was funded by an ACLS Digital Innovation Grant, and by the National Endowment of the Humanities Digital Humanities Start-Up Grant,  Award# HD5178713. The views and results expressed don't necessarily reflect the views of the funding agencies.
 
+Before this dataset was merged with others to create **masterficmetadata,** I ran **enrichpre23.py**, in order to add certain columns of metadata that I had learned to scrape from MARC only after the original dataset was created. These include, e.g., authors' dates of birth and death.
+
 incopyrighthathifiction.csv
 ---------------------------
 Metadata for HathiTrust fiction in copyright. Fiction was identified algorithmically, using a variant of the strategy mentioned above; code is contained in [the 20c genres repo.](https://github.com/tedunderwood/20cgenres)
@@ -28,3 +30,17 @@ If you want to cite this as a resource, I would recommend citing [the stable for
 Page-level metadata for this dataset is in **incopyrightpagepredicts.** It's not organized very well yet, and it's bulky, but it's there.
 
 The work that developed this dataset was funded by SSHRC via the NovelTM project, administered at McGill University, and by the Andrew W. Mellon foundation, via the WCSA+DC project, administered by HathiTrust Research Center. The views and results expressed don't necessarily reflect the views of the funding agencies.
+
+oa supplement
+-------------
+
+The two datasets described above ("pre23" and "incopyright") don't actually cover everything, because some post-22 fiction is not strictly speaking in copyright. I generated a supplement to cover this; the work was done in **../oasupplement**; it runs to about 4,000 vols.
+
+merging and cleaning the sources
+---------------------------------
+
+To merge the sources above, I ran **merge_sources_to_master.py**; this script also does a little data cleaning.
+
+For more involved kinds of data cleaning, I wrote a Jupyter notebook, **master_cleaning.ipynb.** Consult that notebook especially for information about the process that produced the **parttitle** column, listing the separate titles for individual volumes of a multi-volume *Collected Works.*
+
+This is also the notebook that produced the **latestcomp** column, inferring the latest possible date of composition for a volume.
