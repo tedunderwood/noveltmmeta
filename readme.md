@@ -1,19 +1,28 @@
 Fiction metadata
 ================
 
-This repository gives NovelTM a place to coordinate our work on metadata for English-language fiction. Right now it contains mainly two large datasets that include all volumes recognized as "fiction" by an algorithmic sweep through HathiTrust. The nature of the creation process means that these lists incorporate a certain amount of error.
+This repository gives NovelTM a place to coordinate our work on metadata for English-language fiction.
 
-Over the next few months, shorter and more selective lists of fiction will be added. Eventually this whole repo may be frozen in a citable, stable form using Zenodo or (more likely) the NovelTM Dataverse. Right now, the constituent parts (described below) are mostly already available in a stable, citable form.
+Right now the primary source is **masterficmetadata.tsv**, which contains a list of 210,305 volumes of fiction from HathiTrust Digital Library, 1700 - 2010. More precisely, this is a list of volumes *predicted to be fiction*; for the process of genre estimation and associated error, see more detailed discussion in the **/makemaster** directory.
+
+The columns in **masterficmetadata** are explained in **masterficdatadictionary.md.**
+
+Over the next few months, shorter and more selective lists of fiction will be added. Eventually this whole repo will be frozen in a citable, stable form, and archived in the NovelTM Dataverse.
 
 makemaster
 ----------
 
-Describes the process used to construct masterfictionmetadata.tsv. This folder also includes several source files that I may have referenced in other repositories.
+Describes the process used to construct masterfictionmetadata.tsv. This folder also includes several source files covering shorter segments of the timeline; I may have referenced these in other repositories.
+
+oasupplement
+------------
+
+Code and data used to catch works of fiction after 1922 but not in copyright.
 
 bestsellersources
 -----------------
 
-A folder containing a lot of different metadata about bestsellers in England and America.
+A folder containing a range of metadata about bestsellers in England and America.
 
 "reviewed" or "obscure" fiction 1850-1950
 -----------------------------------------
