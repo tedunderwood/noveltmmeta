@@ -12,7 +12,7 @@ Note also that this collection *has not been deduplicated.* When there are multi
 the meanings of columns
 -----------------------
 
-**docid** HathiTrust volume ID. This is an item-level identifier for volumes. IDs used for pairtree storage can come in two different forms; I have provided the ``clean'' versions of the IDs that are legal as filenames~\cite{pairtree}.
+**docid** HathiTrust volume ID. This is an item-level identifier for volumes. IDs used for [pairtree storage](https://confluence.ucop.edu/display/Curation/PairTree) can come in two different forms; I have provided the "clean" versions of the IDs that are legal as filenames.
 
 **oldauthor** This is the author name as recorded in HathiTrust.
 
@@ -21,6 +21,8 @@ the meanings of columns
 **authordate** Birth and death dates, to the extent that they were available in Hathi.
 
 **inferreddate** The earliest date of publication attested in various MARC date fields. But note, this is a date of publication, not a date of *first* publication. Inference is made by the function **infer_date** in [the module **SonicScredriver.py**](https://github.com/tedunderwood/library/blob/master/SonicScrewdriver.py).
+
+Note that **inferreddate** will be reported as **zero** in cases where the algorithm couldn't reliably discern a true date. This is not an ideal way to handle missing data, but this is work in progress.
 
 **latestcomp** The latest possible date of composition given everything else we know. It will be earlier than inferreddate if we know either 1) the author's date of death or 2) a copyright / first publication date for the title. For this process of inference, see **makemaster/clean_master.ipynb***.
 
@@ -41,8 +43,6 @@ the meanings of columns
 **place:** Place of publication code, as documented in MARC controlfield 008, to interpret it see the [MARC Code List for Countries.](https://www.loc.gov/marc/countries/)
 
 **recordid:** This is the HathiTrust record ID; in multivolume works, it may be the same for all volumes.
-
-Note that **inferreddate** will be reported as **zero** in cases where the algorithm couldn't reliably discern a true date. This is not an ideal way to handle missing data, but this is work in progress.
 
 **enumcron** A field that usually distinguishes multiple volumes of a single record. Sometimes it has other uses.
 
