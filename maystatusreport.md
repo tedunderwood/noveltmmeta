@@ -45,9 +45,9 @@ Back [in Nov, I was very ambitious](https://github.com/tedunderwood/noveltmmeta/
 
 **3h.** Other things, if anyone wants to take them on.
 
-The creation of these samples will be strongly dependent on research assistants funded by NovelTM. The RAs will need to groom each sample to ensure that it contains only fiction, and that basic demographic information about each author is correct. They may also enrich genre tags, at least to separate novels from short stories, and possibly to propagate other LoC genre designations more evenly across the timeline. In doing this, I'll try to ensure that they learn some data analysis skills along with the grunt work.
+The creation of these samples will be strongly dependent on research assistants funded by NovelTM. The RAs will need to groom each sample to ensure that it contains only fiction, and that basic demographic information about each author is correct. They will provide an actual date of first publication. They may also enrich genre tags, at least to separate novels from short stories, and possibly to propagate other LoC genre designations more evenly across the timeline. In doing this, I'll try to ensure that RAs learn some data analysis skills along with the legwork.
 
-Note that I am not proposing to *limit* these samples to novels, but rather to tag the novels as novels.
+Note that I am not proposing to *limit* these samples to novels, but rather to tag the novels as novels. If you feel differently speak now or forever etc.
 
 the final report
 -----------------
