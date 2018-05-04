@@ -13,7 +13,7 @@ Wrote **makemaster/enrichpre23.py,** in order to flesh out the **pre1923hathific
 Merged the **oasupplement** with **incopyrightfiction** and **enrichedpre1923ficmeta**, to create **mergedficmetadata,** an intermediate file I have not pushed to repo.
 
 Wed Apr 25, 2018
-----------
+-----------------
 
 Built master_cleaning.ipynb to take care of some messy and complicated kinds of data cleaning. This transformed **makemaster/mergedficmeta** into **masterficmeta**.
 
@@ -25,4 +25,9 @@ Wrote and ran **dedup/first_deduplication.ipynb** and **dedup/second_deduplicati
 I think the deduplication is pretty good, and probably good-enough, but it hasn't by any means been optimized yet. Need to switch gears right now to a different project, but if I get time, I might run textual comparisons btw all volumes of the same author and use that measurement, along with title comparison, as input to train an actual model making decisions about the similarity cutoff.
 
 
+Friday, May 4, 2018
+--------------------
 
+Revised **dedup/first_deduplication.ipynb** to incorporate more manual checking of author names; also added unicode normalization for accented characters -- which, omg, I should have known about long ago.
+
+In the process of revising **dedup/second_deduplication.ipynb** to use textual content as well as metadata when deciding whether two vols are "the same work." This improves accuracy to a surprisingly small degree: maybe from 82% to 87%. But it's probably worth doing; only have to do it once.
