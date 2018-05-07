@@ -3,20 +3,18 @@ work metadata dictionary
 
 A key to the meaning of columns in **workmeta.tsv,** a tab-separated tabular file in utf-8 encoding.
 
-This is a list of 135,325 volumes that I believe to contain fiction. It has not been manually checked; it was produced by predictive modeling, and reflects estimated probabilities. Some of these volumes will actually be biography or folklore, for instance. If you have high standards for precision and recall, probably the best approach is to view this as a starting-place for further winnowing.
+This is a list of 138,164 volumes that I believe to contain fiction. It has not been manually checked; it was produced by predictive modeling, and reflects estimated probabilities. Errors are of two broad kinds. Some volumes are mistakenly included: for instance, some of these volumes will actually be biography or folklore. Some volumes will also have been mistakenly overlooked, either in the initial sweep for fiction, or in the process of deduplication that boiled this down. To understand all the possible sources of error, you might need to consult the code in the **/makemaster** and **/dedup** directories.
 
-This file was derived from **manifestmeta.tsv**, and passed through the further deduplication process documented in **dedup/second_deduplication.ipynb**. Basically, the goal was to identify one copy of each fiction "title"--by preference the earliest copy available in Hathi. Fuzzy matching was used for deduplication; this is an imperfect process. So, for instance, I collapsed many copies of *Mary Barton* down to one in 1848. But this dataset still includes another copy in 1993 that bore the full title *Mary Barton, a Tale of Manchester Life*. Fuzzy matching of titles was not sufficient to identify this as "the same book."
+This file was derived from **manifestmeta.tsv**, and passed through the further deduplication processes documented in **dedup/second_deduplication.ipynb** and **dedup/third_deduplication.ipynb**. Basically, the goal was to identify one copy of each fiction "title"--by preference the earliest copy available in Hathi. Probabilistic modeling was used: this is an imperfect process. So, for instance, I collapsed eight duplicate copies of *Mary Barton* down to one in 1848. But this dataset still includes another copy in 1993 that bore the full title *Mary Barton, a Tale of Manchester Life*. Fuzzy matching of titles, and even volume text, was not sufficient to identify this as "the same book."
 
-Conversely, deduplication will sometimes discard things that ought to be kept. For instance, if you consult **dedup/dubiouscalls.txt** you will notice that I have collapsed *The Bobbsey Twins at Home* and *The Bobbsey Twins at School.* These are presumably different stories, but their titles weren't quite distinct enough to escape the collapsing power of fuzzy-matching. (Many other Bobbsey Twins titles were distinct enough to be preserved.)
+However, you can often further reduce duplication by using the **earlyedition** column, which flags books published *within 25 years of the latest possible date of composition for the book*. Usually this means "within 25 years of the author's death.""
 
-Better algorithms can be envisioned; if I get time, I'll improve this by adding textual comparisons between the extracted features for works by the same author. A certain amount of manual standardization of author names (for very prolific authors) would also improve accuracy.
+The file is called **workmeta** because it roughly aims for for the level of description characterized as "work" [in FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records).
 
-I have roughly aimed for the level of description characterized as "work" [in FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). Thus the title of the file.
+the meanings of new columns:
+----------------------------
 
-the meanings of columns
------------------------
-
-These columns are mostly the same as in **masterficmetadata.tsv.** Only three columns have been added:
+These columns are mostly the same as in **masterficmetadata.tsv.** Only four columns have been added:
 
 **instances** The number of copies of this manifestation (recordID + volnum) collapsed in deduplication.
 
@@ -24,7 +22,14 @@ These columns are mostly the same as in **masterficmetadata.tsv.** Only three co
 
 **copiesin25yrs** The number of copies of this work that were dated within 25 years of the earliest copy in Hathi (which is presumably this copy.)
 
-The other columns remain the same:
+**earlyedition** This column reports **True** for volumes where
+
+    **inferreddate** < **latestcomp** + 25
+
+For the most part, this means volumes published within 25 years of their author's lifespan. (Though do sometimes have additional information that allows us to locate a "latest possible date of composition" before the death of the author.)
+
+Columns shared with masterficmetadata:
+--------------------------------------
 
 **docid** HathiTrust volume ID. This is an item-level identifier for volumes. IDs used for [pairtree storage](https://confluence.ucop.edu/display/Curation/PairTree) can come in two different forms; I have provided the "clean" versions of the IDs that are legal as filenames.
 
