@@ -25,9 +25,18 @@ Wrote and ran **dedup/first_deduplication.ipynb** and **dedup/second_deduplicati
 I think the deduplication is pretty good, and probably good-enough, but it hasn't by any means been optimized yet. Need to switch gears right now to a different project, but if I get time, I might run textual comparisons btw all volumes of the same author and use that measurement, along with title comparison, as input to train an actual model making decisions about the similarity cutoff.
 
 
-Friday, May 4, 2018
+Fri, May 4, 2018
 --------------------
 
 Revised **dedup/first_deduplication.ipynb** to incorporate more manual checking of author names; also added unicode normalization for accented characters -- which, omg, I should have known about long ago.
 
 In the process of revising **dedup/second_deduplication.ipynb** to use textual content as well as metadata when deciding whether two vols are "the same work." This improves accuracy to a surprisingly small degree: maybe from 82% to 87%. But it's probably worth doing; only have to do it once.
+
+Mon, May 7, 2018
+-----------------
+
+Finished the probabilistic model that predicts whether two vols are the same work. In the end I was able to get accuracy up around 89%; this is documented in the **second_deduplication** notebook.
+
+Also wrote **dedup/third_deduplication.ipynb,** which brings this process most of the way to conclusion. Corrected an error that had caused vols with no author (author "nan") to acquire an authordate value spuriously listing this non-person as having died in 1950!
+
+Added column **earlyedition** to workmeta.
