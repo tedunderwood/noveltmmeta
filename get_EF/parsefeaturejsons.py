@@ -468,7 +468,10 @@ class VolumeFromJson:
 
         add_feature('#sentencelength', self.sentencelength, features)
         add_feature('#typetoken', self.typetoken, features)
-        add_feature('#pctcapitalized', ((self.capitalizedbodytokens * 100) / self.bodytokens), features)
+        if self.bodytokens > 0:
+            add_feature('#pctcapitalized', ((self.capitalizedbodytokens * 100) / self.bodytokens), features)
+        else:
+            add_feature('#pctcapitalized', 0.1, features)
 
         # other features need to be summed across pages
 
@@ -494,7 +497,10 @@ class VolumeFromJson:
             wordlen = len(token)
             listofwordlengths.extend([wordlen] * count)
 
-        meanwordlen = sum(listofwordlengths) / len(listofwordlengths)
+        if len(listofwordlengths) > 0:
+            meanwordlen = sum(listofwordlengths) / len(listofwordlengths)
+        else:
+            meanwordlen = 4.5
         add_feature('#meanwordlength', meanwordlen, features)
 
         return features
@@ -591,6 +597,17 @@ if __name__ == "__main__":
             with open(outfilename, mode = 'a', encoding = 'utf-8') as f:
                 writer = csv.DictWriter(f, fieldnames = columns)
                 writer.writeheader()
+
+        alreadypath = '../data/already_parsed.txt'
+        if os.path.isfile(alreadypath):
+            with open(alreadypath, encoding = 'utf-8') as f:
+                for line in f:
+                    docid = line.strip()
+                    alreadyinmatrix.add(docid)
+
+        print()
+        print('We already have ' + str(len(alreadyinmatrix)) + ' files parsed.')
+        print()
 
         iterations = int(input('Integer number of files to process and add to matrix: '))
         datalist = []
