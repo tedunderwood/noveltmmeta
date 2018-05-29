@@ -1,7 +1,7 @@
 data correction process for short-form metadata
 =======================================
 
-As you go through each row, 
+As you go through each row,
 
 **a)** decide whether this is fiction; if not, write **nonfic** or **poetry** under **category**, and skip to the next row
 
@@ -33,7 +33,7 @@ If you have info about authors' birth or death dates, add it, keeping to the for
 
 If a **realname** or **pseudonym** is salient, add it. If not (it's usually not) leave those fields blank.
 
-**e) firstpub** Try to infer first publication date for the work. If you don't get information that indicates something other than **inferreddate,** leave this field blank.
+**e) Work-specific questions.** Try to infer first publication date for the work. If you find something earlier than **inferreddate**, put it in the **firstpub** column. If not, leave that column blank. If the title implies that this is a volume of *Collected Works* (or similar generic title), see if you can infer the volume-specific title by copying the docid and pasting it into a HathiTrust URL. If so, put the more specific title in **shorttitle.** If not, that's fine; don't sweat this part.
 
 **f)** Finally, make sure something is written under **category**; we're going to be using that field to distinguish completed rows from not-yet-examined rows. You may sort or reshuffle your data, so you won't be able to count on mere sequence to keep track of what you've done.
 
