@@ -26,6 +26,8 @@ it (Italy)
 es (Spain)
 me (Mexico)
 ru (Russia)
+be (Belgium)
+ch (China)
 
 add as needed
 
