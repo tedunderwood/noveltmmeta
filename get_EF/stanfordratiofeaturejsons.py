@@ -10,9 +10,9 @@
 # in order to simply calculate the proportion of words in a book
 # that come from the Stanford list of "hard seeds."
 
-# Example of USAGE:
+# Example of USAGE (from within an ipython console)
 
-# run parsefeaturejsons wholevolume ids2pathlist.tsv
+# run stanfordratiofeaturejsons metasource.tsv outputfile.tsv
 
 import csv, os, sys, bz2, random, json
 from collections import Counter
@@ -85,16 +85,20 @@ def normalize_token(token):
     separate words.
     '''
 
+    global translator
+
     if token == "I":
         return [token.lower()]
         # uppercase I is not usually a roman numeral!
 
     token = token.lower()
+    if token in translator:
+        token = translator[token]
 
     if len(token) < 1:
         return [token]
     elif '-' in token:
-        return token.split('-')
+        return [normalize_token(x)[0] for x in token.split('-')]
         # I never want to treat hyphenated words as distinct
         # features; for modeling it's preferable to count the
         # pieces
