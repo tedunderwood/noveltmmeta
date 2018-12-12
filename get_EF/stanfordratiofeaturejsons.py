@@ -222,13 +222,30 @@ if __name__ == "__main__":
 
     outputfile = args[2]
 
+    if 'onlynov' in outputfile:
+        onlynovels = True
+    else:
+        onlynovels = False
+
+    if 'excludenonfic' in outputfile:
+        exnon = True
+    else:
+        exnon = False
+
     if not os.path.isfile(outputfile):
         with open(outputfile, mode = 'w', encoding = 'utf-8') as f:
             f.write('docid\tallwords\tstanfordwords\n')
 
     missing = 0
 
-    docstoprocess = metasource.docid
+    if onlynovels:
+        docstoprocess = metasource.loc[metasource.category == 'longfiction', 'docid']
+    elif exnon:
+        docstoprocess = metasource.loc[metasource.category != 'notfiction', 'docid']
+    else:
+        docstoprocess = metasource.docid
+
+    print(len(docstoprocess))
 
     for idx, docid in enumerate(docstoprocess):
 
