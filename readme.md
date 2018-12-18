@@ -1,22 +1,18 @@
-Fiction metadata
-================
+NovelTM Metadata for English-Language Fiction, 1700-2009
+========================================================
 
-This repository gives NovelTM a place to coordinate our work on metadata for English-language fiction.
+Metadata for 210,305 volumes in HathiTrust that have been identified as likely to contain English-language fiction. A full guide to this repository is under submission at *The Journal of Cultural Analytics.*
 
-The metadata itself
---------------------
+Ted Underwood, Patrick Kimutis, and Jessica Witte
 
-There are three lists, each with a different level of deduplication / consolidation. All this metadata is drawn ultimately from HathiTrust, and keyed to volume IDs in that library. But an effort is made to standardize some columns (e.g. author name), and certain new columns are added.
+The metadata
+-------------
 
-The biggest dataset is **masterficmetadata.tsv**, which contains a list of 210,305 volumes of fiction from HathiTrust Digital Library, 1700 - 2010. More precisely, this is a list of volumes *predicted to be fiction*; for the process of genre estimation and associated error, see more detailed discussion in the **/makemaster** directory.
+The dataset we have created is multifaceted. Instead of offering a single list of volumes, we provide seven lists constructed in different ways. Researchers can choose the list most suited to their needs--or, better still, choose several lists, in order to compare results.
 
-The next is **manifestationmeta.tsv**, which contains 176,650 volumes. This file tries to exclude duplicate copies of *the same reprinting*, using Hathi "record ids" and "volume numbers" to identify duplicate copies. This level of deduplication is roughly equivalent to the "manifestation" level of description [in FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). Thus the name of the file.
+All seven lists can be found in the **/metadata*** subdirectory. They are tab-separated tables in UTF-8 encoding.
 
-The last is **workmeta.tsv**, which contains 138,164 volumes. This file tries to identify one copy of each fiction "title"--by preference the earliest copy available in Hathi. This is roughly the level of description characterized as "work" [in FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). A probabilistic model was used for deduplication; this is an imperfect process, and entails errors documented in [**dedup/second_deduplication.ipynb.**](https://github.com/tedunderwood/noveltmmeta/blob/master/dedup/second_deduplication.ipynb)
-
-Each of the above files comes with an associated "data dictionary" that documents the meanings of columns.
-
-Eventually this whole repo will be frozen in a citable, stable form, and archived in the NovelTM Dataverse.
+All this metadata is drawn ultimately from HathiTrust, and keyed to volume IDs in that library. But we have made an effort to standardize some columns (e.g. author name), so they may not correpond precisely to the values in Hathi. Many new columns have also been added, either through inference from the original metadata, or (in three cases) by manually adding new information.
 
 Subdirectories
 ==============
