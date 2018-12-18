@@ -166,6 +166,11 @@ class VolumeFromJson:
 
                 for normaltoken in normaltokenlist:
 
+                    if len(normaltoken) < 1:
+                        continue
+                    elif len(normaltoken) < 2 and not normaltoken[0].isalpha():
+                        continue
+
                     for part, count in partsofspeech.items():
                         self.allcounts += count
                         if normaltoken in stanford:
@@ -178,6 +183,11 @@ class VolumeFromJson:
                 normaltokenlist = normalize_token(lowertoken)
 
                 for normaltoken in normaltokenlist:
+
+                    if len(normaltoken) < 1:
+                        continue
+                    elif len(normaltoken) < 2 and not normaltoken[0].isalpha():
+                        continue
 
                     for part, count in partsofspeech.items():
                         self.allcounts += count
@@ -193,6 +203,11 @@ class VolumeFromJson:
                 normaltokenlist = normalize_token(lowertoken)
 
                 for normaltoken in normaltokenlist:
+
+                    if len(normaltoken) < 1:
+                        continue
+                    elif len(normaltoken) < 2 and not normaltoken[0].isalpha():
+                        continue
 
                     for part, count in partsofspeech.items():
                         self.allcounts += count
@@ -222,28 +237,16 @@ if __name__ == "__main__":
 
     outputfile = args[2]
 
-    if 'onlynov' in outputfile:
-        onlynovels = True
-    else:
-        onlynovels = False
-
-    if 'excludenonfic' in outputfile:
-        exnon = True
-    else:
-        exnon = False
-
     if not os.path.isfile(outputfile):
         with open(outputfile, mode = 'w', encoding = 'utf-8') as f:
             f.write('docid\tallwords\tstanfordwords\n')
+    else:
+        print("That file already exists.")
+        sys.exit(0)
 
     missing = 0
 
-    if onlynovels:
-        docstoprocess = metasource.loc[metasource.category == 'longfiction', 'docid']
-    elif exnon:
-        docstoprocess = metasource.loc[metasource.category != 'notfiction', 'docid']
-    else:
-        docstoprocess = metasource.docid
+    docstoprocess = metasource.docid
 
     print(len(docstoprocess))
 
