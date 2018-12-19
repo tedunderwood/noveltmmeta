@@ -1,17 +1,17 @@
 metadata
 =========
 
-Our datasets can be broadly divided into three long lists (> 100,000 volumes) and four shorter lists (< 3,000 volumes), of which three have been manually corrected by human readers. Our long lists were created by probabilistic models that entail significant levels of error. The manually-corrected lists reduce that error, at the cost of providing a smaller sample. The process of checking the shorter lists also allowed us to more precisely characterize the level of error in our longer lists; see Sources of uncertainty.
+Our datasets can be broadly divided into three long lists (> 100,000 volumes) and four shorter lists (< 3,000 volumes), of which three have been manually corrected by human readers. Our long lists were created by probabilistic models that entail significant levels of error. The manually-corrected lists reduce that error, at the cost of providing a smaller sample.
 
 three long lists
 =================
 
-1. The volume list.
+1 The volume list.
 --------------------
 
 This list includes all the volumes we found and identified as fiction: 210,305 volumes between 1700 and 2010. It includes many duplicates: multiple editions/printings of the same title, as well as multiple copies of each printing. The outer boundary of this list was shaped by probabilistic models that identified fiction and attempted to filter out other genres (error enters at this step of the process).
 
-2. The record list.
+2 The record list.
 --------------------
 
 This list tries to exclude duplicate copies of the same printing, using Hathi “record ids” and “volume numbers” to identify duplicate copies. At this level of deduplication, we have 176,650 distinct records. This is roughly analogous to the "manifestation" level of description in Functional Requirements for Bibliographic Records.   (Please note that the analogy is only rough.)
