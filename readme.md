@@ -19,7 +19,7 @@ Subdirectories
 
 The code we used to create the metadata has been archived in subdirectories, so that researchers can understand where this information is coming from.
 
-However, please note that this is not a situation where you can simply push a button and expect to re-run the entire pipeline. That definitely will not work. This was a several-year process, and there was a lot of manual intervention along the way.
+However, please note that this is not a situation where you can simply push a button and expect to re-run the entire pipeline. That definitely will not work. This was a several-year process; there was a lot of manual intervention along the way, and files had to be renamed and moved at the end for reasons of expository clarity, which broke a lot of path names in earlier scripts. Please understand the code as documentation of what we did, not as a reproducible workflow. To be honest, "reproducing" this project would involve several years of labor; you'd be better off just making your own dataset and comparing it to our results.
 
 eda
 -------
