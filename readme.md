@@ -40,9 +40,25 @@ manuallists
 
 Documents the process that produced smaller, manually checked subsets (the manual_title_subset, gender_balanced_subset, and frequently_reprinted_subset).
 
-
 get_EF
 ------
 
 Code used to download extracted features, which were used as part of the dedup process, in order to decide when two volumes (or records) were so similar as to be probably "the same work." I have not stored the extracted-feature data itself in the repo; it comes to several gigabytes.
 
+
+Other directories
+=================
+
+plans
+-----
+Early draft plans for this project.
+
+missing
+-------
+Sketches toward a list of titles surprisingly missing in Hathi. May be out of date.
+
+incopyrightpagepredicts
+-----------------------
+Page-level genre predictions for volumes after 1923. Before 1923, see [the Figshare repository.](https://figshare.com/articles/Page_Level_Genre_Metadata_for_English_Language_Volumes_in_HathiTrust_1700_1922/1279201)
+
+Note that I am not aggressively publicizing page-level data, because I don't yet have any way to ensure that it reflects current page IDs for these volumes. HathiTrust doesn't yet have persistent page identifiers.
