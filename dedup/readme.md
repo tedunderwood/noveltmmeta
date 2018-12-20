@@ -3,6 +3,16 @@ deduplication
 
 Code used in the deduplication process. Mainly Jupyter notebooks for legibility.
 
+To understand these notebooks, you need to keep in mind that the names of the datasets were changed at the end of the process to be more intelligible to a wide audience.
+
+1. The largest dataset, now called ```volumemeta.tsv``` will be referred to in these notebooks as ```masterficmeta.tsv.```
+
+2. The next stage of deduplication, now called ```recordmeta.tsv,``` will be referred to in these notebooks as ```manifestationmeta.tsv.```
+
+3. The last stage of deduplication, now called ```titlemeta.tsv,``` is referred to here as ```workmeta.tsv.```
+
+With those provisos, I hope the code here is mostly intelligble.
+
 first_deduplication.ipynb
 -----------------------------
 

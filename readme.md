@@ -14,7 +14,7 @@ All seven lists can be found in the **/metadata** subdirectory. They are tab-sep
 
 All this metadata is drawn ultimately from HathiTrust, and keyed to volume IDs in that library. But we have made an effort to standardize some columns (e.g. author name), so they may not correpond precisely to the values in Hathi. Many new columns have also been added, either through inference from the original metadata, or (in three cases) by manually adding new information.
 
-Subdirectories
+Code directiories
 ==============
 
 The code we used to create the metadata has been archived in subdirectories, so that researchers can understand where this information is coming from.
