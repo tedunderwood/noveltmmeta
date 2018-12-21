@@ -1,9 +1,9 @@
 makemaster
 ===========
 
-Code used to generate the master list of fiction metadata. The product of this work is stored at the top level of **noveltmmeta** as **masterficmetadata.tsv**; the sources and code are exposed here.
+Code used to generate the master list of fiction metadata. The product of this work is stored in the [**/metadata**](https://github.com/tedunderwood/noveltmmeta/tree/master/metadata) subfolder of noveltmmeta as ```volumemeta.tsv.``` The components that were immediately fused to create it are exposed here, and described below.
 
-In practice, the process began with two lists of fiction developed for previous projects:
+If you want to go back even further and understand how these components were *themselves* created, see the scripts ```scrape_json.py``` and ```scrape_marc.py``` in [**DataMunging/HathiMetadata**](https://github.com/tedunderwood/DataMunging/tree/master/HathiMetadata).
 
 pre1923hathifiction.csv
 -----------------------
