@@ -1,4 +1,4 @@
-NovelTM Metadata for English-Language Fiction, 1700-2009
+NovelTM Data Sets for English-Language Fiction, 1700-2009
 ========================================================
 
 Metadata for 210,305 volumes in HathiTrust that have been identified as likely to contain English-language fiction. A full guide to this repository is under submission at *The Journal of Cultural Analytics.*
