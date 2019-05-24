@@ -91,7 +91,7 @@ cz (Czech Republic)
 
 pr (Puerto Rico)
 
-We corrected **shorttitle* in cases where it was clearly in error, for instance, when a volume bore a title like *Collected Works* instead of something more specific.
+We corrected **shorttitle** in cases where it was clearly in error, for instance, when a volume bore a title like *Collected Works* instead of something more specific.
 
 **category** contains a rough genre categorization. Options include *poetry, drama, notfiction, juvenile, shortfiction,* and *longfiction.* We avoided terms like "novel" and "short story" because we don’t want to bog down in debates about whether, for instance, sketches and folk tales are short stories *sensu stricto.* Since genre, form, and audience are in principle separable, it would be possible to assign multiple tags to indicate, for instance, that a volume is juvenile nonfiction. In practice this report is focused on fiction, so we assigned only a single value in this column; we have not attempted to subdivide poetry, drama, or nonfiction by audience.
 
