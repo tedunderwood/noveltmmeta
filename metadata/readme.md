@@ -3,6 +3,10 @@ metadata
 
 Our datasets can be broadly divided into three long lists (> 100,000 volumes) and four shorter lists (< 3,000 volumes), of which three have been manually corrected by human readers. Our long lists were created by probabilistic models that entail significant levels of error. The manually-corrected lists reduce that error, at the cost of providing a smaller sample.
 
+**Data dictionaries**: note that most of the data files (ending ```.tsv```) are paired with "data dictionaries"
+ (ending ```.md```) that explain the meaning of columns.
+
+
 three long lists
 =================
 
