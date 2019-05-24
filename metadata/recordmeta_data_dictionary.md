@@ -1,11 +1,10 @@
 Data dictionary for the record list
 ===================================
 
-A key to the meaning of columns in **recordmeta.tsv.** This is a tab-separated tabular file in utf-8 encoding.
+A key to the meaning of columns in **recordmeta.tsv,** a tab-separated tabular file in utf-8 encoding.
+This is a list of 176,650 volumes that we believe to contain fiction. It has not been manually checked; it was produced by predictive modeling, and reflects estimated probabilities. Some of these volumes will actually be biography or folklore, for instance. If you have high standards for precision and recall, probably the best approach is to view this as a starting-place for further winnowing.
 
-This is a list of 176,650 volumes that I believe to contain fiction. It has not been manually checked; it was produced by predictive modeling, and reflects estimated probabilities. Some of these volumes will actually be biography or folklore, for instance. If you have high standards for precision and recall, probably the best approach is to view this as a starting-place for further winnowing.
-
-This file was derived from **masterficmetadata.tsv**, and passed through the deduplication process documented in **dedup/first_deduplication.ipynb**. Author names have been lightly standardized (esp. re: variations of punctuation and initials --> full names) but no effort has been made to collapse multiple reprintings of a book by the same author. Some effort *has* been made to exclude duplicate copies of *the same reprinting*. I used Hathi "record ids" and "volume numbers" to identify duplicate copies; this level of deduplication is roughly equivalent to the "manifestation" level of description [in FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). In effect, rows in this file are identified by a unique combination of recordID and volume number/enumcron.
+This file was derived from **volumemeta.tsv**, and passed through the deduplication process documented in **dedup/first_deduplication.ipynb**. Author names have been lightly standardized (esp. re: variations of punctuation and initials --> full names) but no effort has been made to collapse multiple reprintings of a book by the same author. Some effort *has* been made to exclude duplicate copies of *the same reprinting*. I used Hathi "record ids" and "volume numbers" to identify duplicate copies; this level of deduplication is roughly equivalent to the "manifestation" level of description [in FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). In effect, rows in this file are identified by a unique combination of recordID and volume number/enumcron.
 
 the meanings of columns
 -----------------------

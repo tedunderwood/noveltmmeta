@@ -5,7 +5,7 @@ A key to the meaning of columns in **volumemeta.tsv.** This is a tab-separated t
 
 This is a list of 210,305 volumes that we believe to contain fiction. It has not been manually checked; it was produced by predictive modeling, and reflects estimated probabilities. If you have high standards for precision and recall, probably the best approach is to view this as a starting-place for further winnowing.
 
-I have tried to err on the side of inclusiveness. This collection will include many more volumes of fiction than you would get if you relied purely on genre tags in the existing MARC records. But it will also include a certain number of volumes that are better characterized as biography, travel writing, or folklore.
+We have tried to err on the side of inclusiveness. This collection will include many more volumes of fiction than you would get if you relied purely on genre tags in the existing MARC records. But it will also include a certain number of volumes that are better characterized as biography, travel writing, or folklore.
 
 Note also that this collection *has not been deduplicated.* When there are multiple copies or reprints of a work, it will occur multiple times in this table.
 
