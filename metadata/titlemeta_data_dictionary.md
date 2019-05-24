@@ -1,20 +1,18 @@
-work metadata dictionary
+Data dictionary for the title list.
 ==================================
 
-A key to the meaning of columns in **workmeta.tsv,** a tab-separated tabular file in utf-8 encoding.
+A key to the meaning of columns in **titlemeta.tsv,** a tab-separated tabular file in utf-8 encoding.
 
-This is a list of 138,164 volumes that I believe to contain fiction. It has not been manually checked; it was produced by predictive modeling, and reflects estimated probabilities. Errors are of two broad kinds. Some volumes are mistakenly included: for instance, some of these volumes will actually be biography or folklore. Some volumes will also have been mistakenly overlooked, either in the initial sweep for fiction, or in the process of deduplication that boiled this down. To understand all the possible sources of error, you might need to consult the code in the **/makemaster** and **/dedup** directories.
+This is a list of 138,164 volumes that we believe to contain fiction. It has not been manually checked; it was produced by predictive modeling, and reflects estimated probabilities. Errors are of two broad kinds. Some volumes are mistakenly included: for instance, some of these volumes will actually be biography or folklore. Some volumes will also have been mistakenly overlooked, either in the initial sweep for fiction, or in the process of deduplication that boiled this down. To understand all the possible sources of error, you might need to consult the code in the **/makemaster** and **/dedup** directories.
 
-This file was derived from **manifestmeta.tsv**, and passed through the further deduplication processes documented in **dedup/second_deduplication.ipynb** and **dedup/third_deduplication.ipynb**. Basically, the goal was to identify one copy of each fiction "title"--by preference the earliest copy available in Hathi. Probabilistic modeling was used: this is an imperfect process. So, for instance, I collapsed eight duplicate copies of *Mary Barton* down to one in 1848. But this dataset still includes another copy in 1993 that bore the full title *Mary Barton, a Tale of Manchester Life*. Fuzzy matching of titles, and even volume text, was not sufficient to identify this as "the same book."
+This file was derived from **recordmeta.tsv**, and passed through the further deduplication processes documented in **dedup/second_deduplication.ipynb** and **dedup/third_deduplication.ipynb**. Basically, the goal was to identify one copy of each fiction "title"--by preference the earliest copy available in Hathi. Probabilistic modeling was used: this is an imperfect process. So, for instance, I collapsed eight duplicate copies of *Mary Barton* down to one in 1848. But this dataset still includes another copy in 1993 that bore the full title *Mary Barton, a Tale of Manchester Life*. Fuzzy matching of titles, and even volume text, was not sufficient to identify this as "the same book."
 
 However, you can often further reduce duplication by using the **earlyedition** column, which flags books published *within 25 years of the latest possible date of composition for the book*. Usually this means "within 25 years of the author's death.""
-
-The file is called **workmeta** because it roughly aims for for the level of description characterized as "work" [in FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records).
 
 the meanings of new columns:
 ----------------------------
 
-These columns are mostly the same as in **masterficmetadata.tsv.** Only four columns have been added:
+These columns are mostly the same as in **recordmeta.tsv.** Only four columns have been added:
 
 **instances** The number of copies of this manifestation (recordID + volnum) collapsed in deduplication.
 

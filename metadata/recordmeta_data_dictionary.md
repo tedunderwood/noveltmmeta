@@ -1,11 +1,11 @@
-manifestation metadata dictionary
-==================================
+Data dictionary for the record list
+===================================
 
-A key to the meaning of columns in **manifestationmeta.tsv.** This is a tab-separated tabular file in utf-8 encoding.
+A key to the meaning of columns in **recordmeta.tsv.** This is a tab-separated tabular file in utf-8 encoding.
 
 This is a list of 176,650 volumes that I believe to contain fiction. It has not been manually checked; it was produced by predictive modeling, and reflects estimated probabilities. Some of these volumes will actually be biography or folklore, for instance. If you have high standards for precision and recall, probably the best approach is to view this as a starting-place for further winnowing.
 
-This file was derived from **masterficmetadata.tsv**, and passed through the deduplication process documented in **dedup/first_deduplication.ipynb**. Author names have been lightly standardized (esp. re: variations of punctuation and initials --> full names) but no effort has been made to collapse multiple reprintings of a book by the same author. Some effort *has* been made to exclude duplicate copies of *the same reprinting*. I used Hathi "record ids" and "volume numbers" to identify duplicate copies; this level of deduplication is roughly equivalent to the "manifestation" level of description [in FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). Thus the title of the file.
+This file was derived from **masterficmetadata.tsv**, and passed through the deduplication process documented in **dedup/first_deduplication.ipynb**. Author names have been lightly standardized (esp. re: variations of punctuation and initials --> full names) but no effort has been made to collapse multiple reprintings of a book by the same author. Some effort *has* been made to exclude duplicate copies of *the same reprinting*. I used Hathi "record ids" and "volume numbers" to identify duplicate copies; this level of deduplication is roughly equivalent to the "manifestation" level of description [in FRBR](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records). In effect, rows in this file are identified by a unique combination of recordID and volume number/enumcron.
 
 the meanings of columns
 -----------------------
@@ -26,7 +26,7 @@ The other columns remain the same:
 
 **inferreddate** The earliest date of publication attested in various MARC date fields. But note, this is a date of publication, not a date of *first* publication. Inference is made by the function **infer_date** in [the module **SonicScredriver.py**](https://github.com/tedunderwood/library/blob/master/SonicScrewdriver.py).
 
-Note that **inferreddate** will be reported as **zero** in cases where the algorithm couldn't reliably discern a true date. This is not an ideal way to handle missing data, but this is work in progress.
+Note that **inferreddate** will be reported as **zero** in cases where the algorithm couldn't reliably discern a true date. This is not an ideal way to handle missing data, but many aspects of this data are less than ideal.
 
 **latestcomp** The latest possible date of composition given everything else we know. It will be earlier than inferreddate if we know either 1) the author's date of death or 2) a copyright / first publication date for the title. For this process of inference, see **makemaster/clean_master.ipynb***.
 
