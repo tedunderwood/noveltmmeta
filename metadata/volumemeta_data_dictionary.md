@@ -34,7 +34,7 @@ Note that **inferreddate** will be reported as **zero** in cases where the algor
 
 **subjects** and **geographics** are Library of Congress headings that a cataloger assigned to the work. Geographics indicate that the work is about a specific region.
 
-**genres** are mostly Library of Congress genre/form headings, but this column has also been used to record some flags contained in [character position 33 of Marc field 008](https://www.loc.gov/marc/bibliographic/bd008b.html). You'll notice that in many cases this field states "Not fiction." That reflects the fact that a 0 (not fiction) was entered in this field. The unreliability of existing genre metadata is why I felt I needed to train predictive models.
+**genres** are mostly Library of Congress genre/form headings. At an early stage of processing, this column was used to record some flags contained in [character position 33 of Marc field 008](https://www.loc.gov/marc/bibliographic/bd008b.html), but that information was so unreliable and confusing that we removed it from the final release.
 
 **oclc:** OCLC number, when available.
 
