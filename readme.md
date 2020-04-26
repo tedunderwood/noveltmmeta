@@ -1,7 +1,7 @@
 NovelTM Datasets for English-Language Fiction, 1700-2009
 ========================================================
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3380367.svg)](https://doi.org/10.5281/zenodo.3380367)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3766610.svg)](https://doi.org/10.5281/zenodo.3766610)
 
 Metadata for 210,305 volumes in HathiTrust that have been identified as likely to contain English-language fiction. A full guide to this repository is under submission at *The Journal of Cultural Analytics.*
 
