@@ -1,11 +1,11 @@
-NovelTM Metadata for English-Language Fiction, 1700-2009
+NovelTM Datasets for English-Language Fiction, 1700-2009
 ========================================================
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3380367.svg)](https://doi.org/10.5281/zenodo.3380367)
 
 Metadata for 210,305 volumes in HathiTrust that have been identified as likely to contain English-language fiction. A full guide to this repository is under submission at *The Journal of Cultural Analytics.*
 
-Ted Underwood, Patrick Kimutis, and Jessica Witte
+For a fuller description of this data, see the accompanying article in the *Journal of Cultural Analytics* by Ted Underwood, Patrick Kimutis, and Jessica Witte. Levels of error are described statistically in that article. The authors do not plan to correct details in the dataset. This is a snapshot of a particular (imperfect) state of our knowledge circa 2019, not a resource we intend to update and maintain in perpetuity.
 
 The [metadata itself](https://github.com/tedunderwood/noveltmmeta/tree/master/metadata)
 -------------------
